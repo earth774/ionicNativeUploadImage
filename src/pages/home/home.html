@@ -11,4 +11,17 @@
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
+  <ion-item>
+    <ion-label>ค้นหาข้อมูล </ion-label>
+    <ionic-selectable item-content [(ngModel)]="port" [items]="ports" itemValueField="id" itemTextField="name"
+      [canSearch]="true" (onChange)="portChange($event)">
+    </ionic-selectable>
+  </ion-item>
+  <h1>Use Camera in Ionic App</h1>
+
+
+  <button ion-button (click)="presentUploadImage()">Take Photo</button>
+  <button ion-button (click)="getImage(0)">take</button>
+  <button ion-button (click)="getImage(1)">Capture Image</button>
+  <p><img [src]="image"></p>
 </ion-content>
